@@ -1,6 +1,6 @@
 <?php
 $u = posix_getpwuid(posix_geteuid());
-$dir = '/tmp/private-test';
+$dir = '/data/test';
 @mkdir($dir, 0700);
 $ok = @file_put_contents("$dir/t.txt", 'ok') !== false;
 header('Content-Type: text/plain');
